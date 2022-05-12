@@ -7,20 +7,31 @@ string = "The Euro STOXX 600 index, which tracks all stock markets across Europe
 
 result = re.search(r'\d{3}', string)
 print(result)
-print('='*200)
+print('=' * 200)
 
 result = re.split(r"\d{2,}", string)
 print(result)
-print('='*200)
+print('=' * 200)
 
 result = re.sub(r"[A-Z]{2,}", "INDEX", string, 2)
 print(result)  # will just return the string with the replaced data.
-print('='*200)
+print('=' * 200)
 
 result = re.subn(r"[A-Z]{2,}", "Index", string, 2)
 print(result)  # will return string with replaced data and the count of elements it replaced.
-print('='*200)
+print('=' * 200)
 
 result = re.search(r".+(\d\d).+(\d\d\d).", string)
 print(result.groups())
+print('=' * 200)
 
+result = re.search(r"\d{3}", string)
+print(string[result.start(): result.end()])
+print('=' * 200)
+
+result = re.findall(r"the", string, re.I)  # re.I Ignores the case sensitivity of string data.
+print(result)
+print('=' * 200)
+
+result = re.search(r".+", "Hello\n venkatesh", re.S)  # re.S will allow us to recognize all the alphanumeric and
+print(result)# special characters including new line
