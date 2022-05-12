@@ -24,5 +24,3 @@ print('='*200)
 result = re.search(r".+(\d\d).+(\d\d\d).", string)
 print(result.groups())
 
-
-
